@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인 페이지</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="debug.css" />
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- ================================================
+         GNB — 글로벌 내비게이션 바
+         [구조] 로고(좌) + 서비스명 텍스트(바로 옆, gap으로 붙음)
+         ================================================ -->
+      <header>
+        <nav class="gnb-container">
+          <div class="gnb-logo-area">
+            <!-- [팀원 가이드] 이 박스 내부에 로고 이미지(<img>)를 구현하세요. -->
+          </div>
+
+          <span class="gnb-service-name">
+            <!-- [팀원 가이드] "SF 취업 가이드" 텍스트를 구현하세요. -->
+          </span>
+        </nav>
+      </header>
+
+      <!-- ================================================
+         메인 콘텐츠 영역
+         ================================================ -->
+      <main class="main-content">
+        <!-- 1. Hero Section
+           [구조] 중앙 정렬된 배너 박스 틀 -->
+        <section class="hero-section-box">
+          <!-- [팀원 가이드] 이 박스 내부에 서비스 메인 타이틀과 설명 문구를
+             세로(flex-direction: column)로, 텍스트 중앙 정렬로 구현하세요.
+             예: <h1>, <p> -->
+        </section>
+
+        <!-- 2. Job Card Container
+           [구조] 4개의 직무 카드를 가로로 나열하는 Flex 레이아웃 -->
+        <section class="job-card-container">
+          <!-- [팀원 가이드] 이 박스 내부에 캐릭터 이미지 공간, 직무 타이틀,
+               태그 영역, 상세 버튼을 세로(flex-direction: column)로
+               자유롭게 구현하세요. -->
+          <!-- Job Card 샘플 -->
+          <div class="job-card-box"></div>
+          <div class="job-card-box"></div>
+          <div class="job-card-box"></div>
+          <div class="job-card-box"></div>
+        </section>
+
+        <!-- 3. Bottom Layout — 좌(폼) / 우(방명록) 가로 분할 틀 -->
+        <section class="bottom-layout-container">
+          <!-- Form Box (좌측)
+             [구조] 입력 요소들과 버튼이 세로로 나열될 폼 컨테이너 -->
+          <div class="form-container-box">
+            <!-- [팀원 가이드] 이 박스 내부에 입력 필드들(이름, 이메일, 메시지 등)과
+               제출 버튼을 세로(flex-direction: column)로 자유롭게 구현하세요. -->
+          </div>
+
+          <!-- Guestbook Box (우측)
+             [구조] 입력 상단부 + 리스트 하단부가 세로로 배치될 방명록 컨테이너 -->
+          <div class="guestbook-container-box">
+            <!-- 방명록 입력 영역 (상단) -->
+            <div class="guestbook-input-area">
+              <!-- [팀원 가이드] 이 박스 내부에 방명록 한 줄 입력 필드와
+                 등록 버튼을 자유롭게 구현하세요. -->
+            </div>
+
+            <!-- 방명록 리스트 영역 (하단) -->
+            <div class="guestbook-list-area">
+              <!-- [팀원 가이드] 이 박스 내부에 작성자명, 날짜, 내용 텍스트를
+                   자유롭게 구현하세요. -->
+              <!-- 방명록 아이템 샘플 -->
+              <div class="guestbook-item-box"></div>
+              <div class="guestbook-item-box"></div>
+              <div class="guestbook-item-box"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- ================================================
+         Footer — 하단 바
+         [구조] 카피라이트(좌) ←→ 링크(우), space-between 정렬
+         ================================================ -->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-copyright-area">
+            <!-- [팀원 가이드] 이 박스 내부에 카피라이트 텍스트를 구현하세요.
+               예: © 2025 Team Name. All rights reserved. -->
+          </div>
+
+          <div class="footer-link-area">
+            <!-- [팀원 가이드] 이 박스 내부에 푸터 링크들을 가로로 나열하세요.
+               예: 개인정보처리방침 / 이용약관 / GitHub -->
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
