@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="debug.css" />
     <link rel="stylesheet" href="./job-postings.css" />
+    <link rel="stylesheet" href="./left-sidebar-box.css" />
     <link rel="stylesheet" href="./page-summary-box.css" />
   </head>
   <body>
@@ -46,12 +47,8 @@
              Left Column — 사이드바 + "이 페이지에서" 박스를 세로로 묶는 래퍼
              ============================================ -->
           <div class="left-column-wrapper">
-            <!-- Left Sidebar: 직무 선택 메뉴 목록 -->
-            <aside class="left-sidebar-box">
-              <!-- [팀원 가이드] 이 박스 내부에 사이드바 메뉴 항목들을
-                 세로(flex-direction: column)로 나열하여 자유롭게 구현하세요.
-                 예: 홈으로 / Administrator / Developer / Consultant / Power User -->
-            </aside>
+            <!-- Left Sidebar: 직무 선택 메뉴 목록 — left-sidebar-box.js가 동적으로 렌더링 -->
+            <aside class="left-sidebar-box"></aside>
 
             <!-- Page Summary Box: "이 페이지에서" 요약 — 모든 직무 공통 항목 -->
             <div class="page-summary-box">
@@ -238,5 +235,6 @@
     </div>
     <script src="./gnb.js"></script>
     <script src="./job-postings.js"></script>
+    <script src="./left-sidebar-box.js"></script>
   </body>
 </html>
