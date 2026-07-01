@@ -5,10 +5,10 @@
 
 // URL 파라미터 값 → 브레드크럼 표시 레이블 매핑
 const GNB_CAREER_LABELS = {
-  admin:      'Admin',
-  dev:        'Dev',
-  consultant: 'Consultant',
-  pu:         'Power User',
+  admin: "Admin",
+  dev: "Dev",
+  consultant: "Consultant",
+  pu: "Power User",
 };
 
 /**
@@ -16,11 +16,13 @@ const GNB_CAREER_LABELS = {
  * 매핑되지 않는 값은 파라미터 값을 그대로 표시
  */
 function gnbUpdateBreadcrumb() {
-  const jobLabel = document.getElementById('gnb-bc-job');
+  const jobLabel = document.getElementById("gnb-bc-job");
   if (!jobLabel) return;
 
-  const careerId = new URLSearchParams(window.location.search).get('career') || 'dev';
+  console.log(window.location.search);
+  const careerId =
+    new URLSearchParams(window.location.search).get("id") || "dev";
   jobLabel.textContent = GNB_CAREER_LABELS[careerId] ?? careerId;
 }
 
-document.addEventListener('DOMContentLoaded', gnbUpdateBreadcrumb);
+document.addEventListener("DOMContentLoaded", gnbUpdateBreadcrumb);
