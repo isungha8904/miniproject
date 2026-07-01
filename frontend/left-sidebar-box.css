@@ -1,0 +1,64 @@
+/* ============================================================
+   left-sidebar.css — 직무 선택 사이드바 메뉴 컴포넌트
+   ============================================================ */
+
+/* 섹션 제목 */
+.sidebar-title {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-subtext);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-1);
+}
+
+/* 메뉴 아이템 — 픽토그램 + 레이블 가로 배치 */
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-gray-700);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.sidebar-menu-item:hover {
+  background-color: var(--color-gray-100);
+  color: var(--color-text);
+}
+
+.sidebar-menu-item:hover .sidebar-item-icon {
+  color: var(--color-gray-700);
+}
+
+/* 활성 상태 — 현재 직무에 맞춰 강조 */
+.sidebar-menu-item.active {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  font-weight: var(--font-semibold);
+}
+
+.sidebar-menu-item.active .sidebar-item-icon {
+  color: var(--color-primary);
+}
+
+/* 픽토그램 아이콘 wrapper */
+.sidebar-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-gray-400);
+  transition: color 0.15s ease;
+}
