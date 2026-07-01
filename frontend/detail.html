@@ -6,11 +6,31 @@
     <title>상세 페이지</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="debug.css" />
+    <link rel="stylesheet" href="./chatbot-icon-override.css" />
+    <link rel="stylesheet" href="./job-header.css" />
+    <link rel="stylesheet" href="./job-illust.css" />
+    <link rel="stylesheet" href="./roadmap-card.css" />
+    <link rel="stylesheet" href="./core-competencies.css" />
     <link rel="stylesheet" href="./job-postings.css" />
+    <link rel="stylesheet" href="./left-sidebar-box.css" />
+    <link rel="stylesheet" href="./page-summary-box.css" />
   </head>
   <body>
     <div class="page-wrapper">
       <!-- ================================================
+=======
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>상세 페이지</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="chatbot-icon-override.css" />
+		<link rel="stylesheet" href="debug.css" />
+	</head>
+	<body>
+		<div class="page-wrapper">
+			<!-- ================================================
+>>>>>>> a461b0c5dbac7bf134de4da670587791c0fb599b
          GNB — 글로벌 내비게이션 바
          [구조] 로고(좌) + 경로 표시(우측 끝, margin-left:auto로 밀림)
          ================================================ -->
@@ -45,18 +65,91 @@
              Left Column — 사이드바 + "이 페이지에서" 박스를 세로로 묶는 래퍼
              ============================================ -->
           <div class="left-column-wrapper">
-            <!-- Left Sidebar: 직무 선택 메뉴 목록 -->
-            <aside class="left-sidebar-box">
-              <!-- [팀원 가이드] 이 박스 내부에 사이드바 메뉴 항목들을
-                 세로(flex-direction: column)로 나열하여 자유롭게 구현하세요.
-                 예: 홈으로 / Administrator / Developer / Consultant / Power User -->
-            </aside>
+            <!-- Left Sidebar: 직무 선택 메뉴 목록 — left-sidebar-box.js가 동적으로 렌더링 -->
+            <aside class="left-sidebar-box"></aside>
 
-            <!-- Page Summary Box: "이 페이지에서" 요약 컴포넌트 -->
+            <!-- Page Summary Box: "이 페이지에서" 요약 — 모든 직무 공통 항목 -->
             <div class="page-summary-box">
-              <!-- [팀원 가이드] 이 박스 내부에 현재 페이지에서 확인할 수 있는
-                 항목 목록(예: 핵심 역량 스텟, 적합성 검사 결과, 추천 자격증 로드맵, 채용 공고)을
-                 세로(flex-direction: column)로 자유롭게 구현하세요. -->
+              <p class="summary-title">이 페이지에서</p>
+              <ul class="summary-list">
+                <li class="summary-item">
+                  <span class="summary-item-icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="18" y1="20" x2="18" y2="10" />
+                      <line x1="12" y1="20" x2="12" y2="4" />
+                      <line x1="6" y1="20" x2="6" y2="14" />
+                    </svg>
+                  </span>
+                  <span class="summary-item-label">핵심 역량 스탯</span>
+                </li>
+                <li class="summary-item">
+                  <span class="summary-item-icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M9 11l3 3L22 4" />
+                      <path
+                        d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                      />
+                    </svg>
+                  </span>
+                  <span class="summary-item-label">적합성 검사 결과</span>
+                </li>
+                <li class="summary-item">
+                  <span class="summary-item-icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polygon
+                        points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"
+                      />
+                    </svg>
+                  </span>
+                  <span class="summary-item-label">추천 자격증 리스트</span>
+                </li>
+                <li class="summary-item">
+                  <span class="summary-item-icon">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                      <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+                    </svg>
+                  </span>
+                  <span class="summary-item-label">채용 공고</span>
+                </li>
+              </ul>
             </div>
           </div>
 
@@ -84,8 +177,53 @@
             <section class="mid-content-flex-layout">
               <!-- Left: 적합성 체크리스트 -->
               <div class="checklist-card-box">
-                <!-- [팀원 가이드] 이 박스는 적합성 체크리스트 컴포넌트 영역입니다.
-                   내부 레이아웃 방향(column/row)은 팀원이 자유롭게 결정하세요. -->
+                <!-- 핵심 역량 스텟 컴포넌트 (core-competencies.css / core-competencies.js)
+                     직무(job) 쿼리스트링이 바뀔 때마다 db.json의 careers[].skills를 새로 fetch해서 렌더링함 -->
+                <div class="stat-card">
+                  <!-- 헤더 -->
+                  <div class="stat-header">
+                    <span class="stat-title">핵심 역량 스텟</span>
+                    <span class="stat-subtitle">(6개 중 선택)</span>
+                  </div>
+
+                  <!-- 체크박스 목록 (core-competencies.js가 db.json을 fetch해 동적으로 채움) -->
+                  <div class="stat-list" id="cc-stat-list"></div>
+
+                  <!-- 결과 섹션 -->
+                  <div class="result-section">
+                    <p class="result-label">직합성 검사 결과</p>
+                    <div class="result-body">
+                      <!-- 원형 진행 차트 -->
+                      <div class="progress-ring">
+                        <svg viewBox="0 0 100 100" class="ring-svg">
+                          <circle class="ring-track" cx="50" cy="50" r="38" />
+                          <circle
+                            class="ring-fill"
+                            cx="50"
+                            cy="50"
+                            r="38"
+                            id="cc-ring-progress"
+                          />
+                        </svg>
+                        <span class="ring-pct" id="cc-ring-pct">0%</span>
+                      </div>
+
+                      <!-- 결과 텍스트 -->
+                      <div class="result-info">
+                        <p class="result-selected" id="cc-result-selected">
+                          6개 중 0개를 선택했어요!
+                        </p>
+                        <p class="result-desc" id="cc-result-desc">
+                          직무에 적합하지 않을 수 있어요.
+                        </p>
+                        <p class="result-tip">
+                          <span class="tip-label">TIP</span> 5개 이상 선택하면
+                          만점으로 판단해요.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <!-- Right: 추천 자격증 로드맵 -->
@@ -203,7 +341,18 @@
         </div>
       </footer>
     </div>
+
+    <script
+      src="https://salesforcechatbot-5cla.vercel.app/widget.js"
+      defer
+    ></script>
+    <script src="./chatbot-icon-override.js defer"></script>
+    <script src="./job-header.js"></script>
+    <script src="./job-illust.js"></script>
+    <script src="./roadmap-card.js"></script>
+    <script src="./core-competencies.js"></script>
     <script src="./gnb.js"></script>
     <script src="./job-postings.js"></script>
+    <script src="./left-sidebar-box.js"></script>
   </body>
 </html>

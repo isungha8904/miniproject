@@ -6,7 +6,7 @@ const sfJcImageMap = {
   admin: "assets/images/floAdminBusiness Analyst.webp",
   dev: "assets/images/Code dev.webp",
   consultant: "assets/images/astros Consultant.webp",
-  pu: "assets/images/Einstein power user.jpg",
+  pu: "assets/images/Einstein power user.webp",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,6 +39,8 @@ async function sfJcRenderCards() {
     });
   } catch (error) {
     console.error(error);
-    alert("직무 카드 정보를 불러오지 못했습니다. json-server가 켜져 있는지 확인해주세요.");
+    alert(
+      "직무 카드 정보를 불러오지 못했습니다. json-server가 켜져 있는지 확인해주세요.",
+    );
   }
 }

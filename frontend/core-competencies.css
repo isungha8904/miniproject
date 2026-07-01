@@ -1,0 +1,196 @@
+/* ============================================================
+   core-competencies.css — 핵심 역량 스텟 카드 내부 스타일
+   (checklist-card-box 내부에 자바스크립트로 렌더링되는 요소들의 스타일)
+   디자인 토큰: style.css의 :root 변수를 공유하여 사용
+   ============================================================ */
+
+/* ── 카드 래퍼 — checklist-card-box가 외부 컨테이너이므로 자체 배경/테두리 없음 ── */
+.stat-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* ── 헤더 ── */
+.stat-header {
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.stat-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.stat-subtitle {
+  font-size: var(--text-xs);
+  color: var(--color-subtext);
+}
+
+/* ── 체크박스 목록 ── */
+.stat-list {
+  flex: 1;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s;
+}
+
+.stat-item + .stat-item {
+  border-top: 1px solid var(--color-border);
+}
+
+.stat-item:hover {
+  background: var(--color-gray-50);
+}
+
+/* 커스텀 체크박스 */
+.check-box {
+  position: relative;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--color-gray-400);
+  border-radius: var(--radius-sm);
+  margin-top: 2px;
+  background: var(--color-surface);
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+
+.stat-item.is-checked .check-box {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* 체크 표시 (흰 V자) */
+.stat-item.is-checked .check-box::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.item-text {
+  font-size: var(--text-sm);
+  color: var(--color-subtext);
+  line-height: 1.55;
+  transition: color 0.12s;
+}
+
+.stat-item.is-checked .item-text {
+  color: var(--color-text);
+}
+
+/* ── 결과 섹션 ── */
+.result-section {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  background: var(--color-primary-light);
+}
+
+.result-label {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.result-body {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* 원형 차트 */
+.progress-ring {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+}
+
+.ring-svg {
+  width: 82px;
+  height: 82px;
+  transform: rotate(-90deg);
+}
+
+.ring-track {
+  fill: none;
+  stroke: var(--color-gray-200);
+  stroke-width: 10;
+}
+
+.ring-fill {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 238.76;
+  stroke-dashoffset: 238.76;
+  transition: stroke-dashoffset 0.45s ease;
+}
+
+.ring-pct {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+}
+
+/* 결과 텍스트 */
+.result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.result-selected {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.result-desc {
+  font-size: var(--text-base);
+  color: var(--color-subtext);
+  line-height: 1.5;
+  margin-bottom: var(--space-2);
+}
+
+.result-tip {
+  font-size: var(--text-sm);
+  color: var(--color-subtext);
+  line-height: 1.5;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-2);
+}
+
+.tip-label {
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+}
