@@ -1,0 +1,17 @@
+# 각자 로컬에서 테스트한 방명록 데이터 (충돌 방지)
+backend/db.json
+
+# 맥(Mac) OS가 자동으로 만드는 폴더 메타데이터
+.DS_Store       
+
+# 윈도우(Windows) OS가 자동으로 만드는 미리보기 찌꺼기
+Thumbs.db      
+
+# VS Code 개인 에디터 설정 폴더
+.vscode/      
+
+# 인텔리제이/웹스톰 개인 에디터 설정 폴더
+.idea/
+
+# 클로드 로컬 설정
+.claude/settings.local.json
