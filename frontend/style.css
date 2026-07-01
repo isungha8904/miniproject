@@ -116,8 +116,7 @@ body {
 }
 
 .gnb-logo-area {
-  min-width: 80px;
-  min-height: 32px;
+  display: flex; /* 로고 영역 내부 요소들을 가로로 나란히 배치 */
 }
 
 .gnb-logo-area img {
