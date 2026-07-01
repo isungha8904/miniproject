@@ -20,7 +20,7 @@ const CC_CIRC = 2 * Math.PI * 38;
  */
 function ccGetSelectedJobId() {
   const params = new URLSearchParams(window.location.search);
-  return params.get("job") || "admin";
+  return params.get("id") || "admin";
 }
 
 /**

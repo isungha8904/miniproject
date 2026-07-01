@@ -7,7 +7,7 @@ const sfJiMascotImageMap = {
   admin: "floAdminBusiness Analyst.webp",
   dev: "Code dev.webp",
   consultant: "astros Consultant.webp",
-  pu: "Einstein power user.jpg",
+  pu: "Einstein power user.webp",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,7 +24,8 @@ async function sfJiInitJobIllust() {
   }
 
   const careerId = sfJiGetCareerIdFromUrl();
-  const imageFileName = sfJiMascotImageMap[careerId] || sfJiMascotImageMap.admin;
+  const imageFileName =
+    sfJiMascotImageMap[careerId] || sfJiMascotImageMap.admin;
 
   try {
     // 이미지의 대체 텍스트(alt)에 사용할 직무 타이틀을 서버에서 조회
@@ -39,7 +40,11 @@ async function sfJiInitJobIllust() {
   } catch (error) {
     console.error(error);
     // alt 텍스트 조회에 실패해도 이미지 자체는 보여줄 수 있도록 기본 문구로 렌더링
-    sfJiRenderMascotImage(illustArea, imageFileName, "세일즈포스 직무 마스코트");
+    sfJiRenderMascotImage(
+      illustArea,
+      imageFileName,
+      "세일즈포스 직무 마스코트",
+    );
   }
 }
 

@@ -81,10 +81,44 @@
   background-color: #e8eef8;
 }
 
+/* Trailhead 배너 — 카드 하단 전체 너비 클릭 영역 */
+.sf-rm-trailhead-banner {
+  display: block;
+  margin-top: auto; /* 로드맵 스텝 아래 남은 공간을 밀어 하단에 고정 */
+  margin-left: calc(-1 * var(--space-7));
+  margin-right: calc(-1 * var(--space-7));
+  margin-bottom: calc(-1 * var(--space-7));
+  padding-top: var(--space-5);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sf-rm-trailhead-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.15s;
+}
+
+.sf-rm-trailhead-banner:hover img {
+  opacity: 0.88;
+}
+
 /* 로딩 중 / 에러 발생 시 보여줄 안내 문구 */
 .sf-rm-status-text {
   font-size: var(--text-sm);
   color: var(--color-subtext);
   text-align: center;
   padding: var(--space-5) 0;
+}
+
+.sf-rm-trailhead-banner {
+  align-self: center;
+}
+
+.sf-rm-trailhead-banner img {
+  height: 200px;
+  width: auto;
+  margin-bottom: 25px;
+  border-radius: 10px;
 }

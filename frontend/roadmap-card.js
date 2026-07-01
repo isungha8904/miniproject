@@ -61,9 +61,18 @@ function sfRmRenderRoadmap(roadmapBox, career) {
 
   roadmapBox.innerHTML = `
     <h3 class="sf-rm-title-text">추천 자격증 리스트</h3>
-    <p class="sf-rm-subtitle-text">단계별로 자격증을 취득하여 커리어를 성장시키세요.</p>
+    <p class="sf-rm-subtitle-text">연관된 자격증을 취득하여 커리어를 성장시키세요.</p>
     <ul class="sf-rm-step-list">
       ${stepListHtml}
     </ul>
+    <a
+      href="https://trailhead.salesforce.com/ko"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="sf-rm-trailhead-banner"
+      aria-label="Salesforce Trailhead 바로가기"
+    >
+      <img src="./assets/images/trailhead.jpg" alt="Salesforce Trailhead" />
+    </a>
   `;
 }
