@@ -1,18 +1,12 @@
 /* 레이아웃 구조 확인용 임시 디버그 CSS — 커밋 금지 */
-.page-wrapper,
-.main-content,
-.gnb-container,
-.gnb-logo-area,
-.gnb-service-name,
-.gnb-breadcrumb-area,
-.footer-container,
-.footer-copyright-area,
-.footer-link-area,
-.hero-section-box,
-.job-card-container,
-.job-card-box,
-.bottom-layout-container,
-.form-container-box,
+/* .page-wrapper, */
+/* .main-content, */
+/* .gnb-container, */
+/* .footer-container, */
+/* .hero-section-box, */
+/* .job-card-container,
+.job-card-box, */
+/* .bottom-layout-container, */
 .guestbook-container-box,
 .guestbook-input-area,
 .guestbook-list-area,
@@ -27,11 +21,18 @@
 .detail-header-illust-area,
 .mid-content-flex-layout,
 .checklist-card-box,
-.roadmap-card-box,
-.job-postings-section,
-.job-postings-title-bar,
-.job-postings-card-list,
-.job-posting-card-box {
+.roadmap-card-box {
   outline: 2px solid red !important;
   outline-offset: -1px;
 }
+
+/* .gnb-logo-area,
+gnb-logo-area
+.gnb-service-name,
+.gnb-breadcrumb-area,
+.footer-copyright-area,
+.footer-link-area,
+.job-postings-section,
+.job-postings-title-bar,
+.job-postings-card-list 
+.job-posting-card-box  */
