@@ -118,6 +118,7 @@ body {
 .gnb-logo-area {
   display: flex; /* 내부 이미지 크기에 딱 맞게 박스를 감싸기 위한 flex 설정 */
   width: fit-content; /* 이미지 실제 너비만큼만 박스 너비 차지 */
+  cursor: pointer;
   min-height: 32px;
 }
 
@@ -130,6 +131,7 @@ body {
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
   color: var(--color-text);
+  cursor: pointer;
 }
 
 .gnb-breadcrumb-area {

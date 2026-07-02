@@ -24,4 +24,19 @@ function gnbUpdateBreadcrumb() {
   jobLabel.textContent = GNB_CAREER_LABELS[careerId] ?? careerId;
 }
 
-document.addEventListener("DOMContentLoaded", gnbUpdateBreadcrumb);
+function gnbBindNavigation() {
+  // 로고 + 서비스명 클릭 → 홈으로
+  document.querySelector(".gnb-logo-area")
+    ?.addEventListener("click", () => { window.location.href = "index.html"; });
+  document.querySelector(".gnb-service-name")
+    ?.addEventListener("click", () => { window.location.href = "index.html"; });
+
+  // 브레드크럼 홈 버튼 클릭 → 홈으로
+  document.querySelector(".gnb-bc-home")
+    ?.addEventListener("click", () => { window.location.href = "index.html"; });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  gnbUpdateBreadcrumb();
+  gnbBindNavigation();
+});
